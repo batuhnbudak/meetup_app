@@ -1,5 +1,5 @@
 import MeetupList from "../components/meetups/MeetupList";
-
+import classes from "../index.css";
 const DUMMY_DATA = [
   {
     id: "m1",
@@ -24,7 +24,7 @@ const DUMMY_DATA = [
 function AllMeetupsPage() {
   return (
     <section>
-      <h1>All Meetups</h1>
+      <h1 className={classes.h1}>All Meetups</h1>
       <MeetupList items={DUMMY_DATA} />
     </section>
   );
