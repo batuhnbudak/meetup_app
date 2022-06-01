@@ -3,7 +3,7 @@ import classes from "./NewMeetupForm.module.css";
 
 import { useRef } from "react";
 
-function NewMeetupForm() {
+function NewMeetupForm(props) {
   const titleInputRef = useRef();
   const urlInputRef = useRef();
   const addressInputRef = useRef();
@@ -23,7 +23,8 @@ function NewMeetupForm() {
       address: enteredAddress,
       description: enteredDesc,
     };
-    console.log(meetupData);
+
+    props.onAddMeetup(meetupData);
   }
   return (
     <Card>
